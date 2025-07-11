@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #121214;
+  color: white;
+}
+
+body * {
+  font-family: "Inter";
+}
+
+header {
+  padding-top: 40px;
+  text-align: center;
+}
+
+header img {
+  width: 300px;
+}
+
+main {
+  max-width: 500px;
+  width: 90%;
+  margin: 40px auto;
+}
+
+section {
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  border-radius: 10px;
+
+  padding-top: 4px;
+}
+
+section>div {
+  padding: 30px;
+  padding-top: 24px;
+  border-radius: 8px;
+  background-color: #2a2c34;
+}
+
+section h2 {
+  letter-spacing: -0.47;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #A1A1AA
+}
+
+main section {
+  opacity: 0;
+  transform: translateY(32px);
+
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+
+}
+
+input,
+select {
+  all: unset;
+  border: 2px solid #9147ff;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #00000066;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 0.12px;
+
+  transition: all 300ms;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translatey(-5px);
+  box-shadow: 0 5px 20px rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  cursor: not-allowed;
+  color: black;
+  box-shadow: initial;
+
+
+}
+
+#aiResponse {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid #43E7AD;
+
+}
+
+#aiResponse ul {
+  padding-left: 20px;
+
+}
+
+#aiResponse p {
+  color: white;
+}
+
+.loading {
+  animation: pulse 1s infinite;
+
+}
+
+.hidden {
+  display: none;
+}
+@fenkeyframes pulse {
+  50% {
+    opacity: 0.5;
+
+  }
+}
